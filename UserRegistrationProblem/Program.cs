@@ -7,10 +7,12 @@
             Console.WriteLine("Welcome to User Registration Problem");
 
             UserRegistration registration = new UserRegistration();
+            Email email1 = new Email();
             bool flag = true;
             while (flag)
             {
-                Console.WriteLine("\nEnter option to choose \n1.First Name \n2.Last Name \n3.Email \n4.Mobile Number \n5.Password \n6.Exit");
+                Console.WriteLine("\nEnter option to choose \n1.First Name \n2.Last Name \n3.Email \n4.Mobile Number " +
+                    "\n5.Password \n6.Check Sample Email \n7.Exit");
                 int option = Convert.ToInt32(Console.ReadLine());
                 switch (option)
                 {
@@ -38,6 +40,11 @@
                         Console.WriteLine("\nEnter Password");
                         string password = Console.ReadLine();
                         Console.WriteLine(registration.ValidatePassword(password));
+                        break;
+                    case 6:
+                        Console.WriteLine("\nEnter Sample Email to Check");
+                        string sampleEmail = Console.ReadLine();
+                        Console.WriteLine(email1.ValidateSampleEmail(sampleEmail));
                         break;
                     default:
                         flag = false;
