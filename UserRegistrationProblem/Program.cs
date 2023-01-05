@@ -10,7 +10,7 @@
             bool flag = true;
             while (flag)
             {
-                Console.WriteLine("\nEnter option to choose \n1.First Name \n2.Last Name \n3.Email \n4.Mobile Number \n5.Exit");
+                Console.WriteLine("\nEnter option to choose \n1.First Name \n2.Last Name \n3.Email \n4.Mobile Number \n5.Password \n6.Exit");
                 int option = Convert.ToInt32(Console.ReadLine());
                 switch (option)
                 {
@@ -33,6 +33,11 @@
                         Console.WriteLine("\nEnter Mobile Number");
                         string mobileNumber= Console.ReadLine();
                         Console.WriteLine(registration.ValidateMobileNUmber(mobileNumber));
+                        break;
+                    case 5:
+                        Console.WriteLine("\nEnter Password");
+                        string password = Console.ReadLine();
+                        Console.WriteLine(registration.ValidatePassword(password));
                         break;
                     default:
                         flag = false;
