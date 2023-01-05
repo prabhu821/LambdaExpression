@@ -12,11 +12,11 @@ namespace UserRegistrationProblem
         public const string FIRSTNAME = "^[A-Z]{1}[A-Za-z]{3,}$";
         public const string LASTNAME = "^[A-Z]{1}[A-Za-z]{2,}$";
         public const string EMAIL = "^abc+.+[a-zA-Z0-9]+@+bl.co+.+[in|com]$";
+        public static string MOBILENUMBER = "^[1-9]{2}[: :][0-9]{10}$";
 
         public string ValidateFirstName(string fName) => Regex.IsMatch(fName, FIRSTNAME) ? "Match" : "No Match";
         public string ValidateLastName(string lName) => Regex.IsMatch(lName, LASTNAME) ? "Match" : "No Match";
-
         public string ValidateEmail(string email) => Regex.IsMatch(email, EMAIL) ? "Match" : "No Match";
-
+        public string ValidateMobileNUmber(string mobileNumber) => Regex.IsMatch(mobileNumber, MOBILENUMBER) ? "Match" : "No Match";
     }
 }
