@@ -46,5 +46,19 @@ namespace UserRegistrationTest
             string actual = userRegistrationValidateTest.ValidatePassword1(password);
             Assert.AreEqual(actual, excepted);
         }
+
+
+        [Test]
+        public void ValidateMultipleEmail()
+        {
+            //Arrange
+            string excepted = "prabhugoyal821@gmail.com";
+            string email = "abc.ram@bl.co.im";
+            //Act
+            ValidateMultipleEmailAddress validateMultipleEmailAddress = new ValidateMultipleEmailAddress();
+            string actual = validateMultipleEmailAddress.MultipleEmailAddress(email);
+            //Assert
+            Assert.AreEqual(actual, excepted);
+        }
     }
 }

@@ -35,4 +35,10 @@ namespace UserRegistrationProblem
         public string ValidatePhoneNumber(string phonenumber) => Regex.IsMatch(phonenumber, MOBILENUMBER) ? "91 9149218712" : "Phonenumber is not match";
         public string ValidatePassword1(string password) => Regex.IsMatch(password, PASSWORD) ? "Prabhu@821" : "Password is not match";
     }
+
+    public class ValidateMultipleEmailAddress
+    {
+        public const string EMAIL = "^abc+.+[a-zA-Z0-9]+@+bl.co+.+[in|com]$";
+        public string MultipleEmailAddress(string email) => Regex.IsMatch(email, EMAIL) ? "prabhugoyal821@gmail.com" : "Email is not match";
+    }
 }
